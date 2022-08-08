@@ -1,9 +1,18 @@
-const menuItems = document.querySelector('.nav-items')
-const menuIcon = document.querySelector('.hamburger')
+import {classArray} from "./classData.js" 
+
 const mainBody = document.querySelector('main')
 const footerBody = document.querySelector('footer')
 const logo = document.querySelector('.logo')
+const menuIcon = document.querySelector('.hamburger')
 let iconState = true
+
+
+function checkClassArray()
+{
+    classArray.map((el)=>{
+        return classChange(el.selectClass, el.changeClass)
+    })
+}
 
 function displayElement(value)
 {
@@ -11,32 +20,28 @@ function displayElement(value)
     footerBody.style.display = value
     logo.style.display = value
 }
+function classChange(selectElement, newClass)
+{
+    document.querySelectorAll(selectElement).forEach(
+        (el)=>{
+            return iconState? el.classList.add(newClass) : el.classList.remove(newClass)
+        }
+    )
+}
+
 menuIcon.addEventListener("click" ,()=>{
+
     if (iconState){
         menuIcon.innerHTML = "&#10005;"
-        menuIcon.classList.add("crossmark")
-        menuItems.classList.add("newmenuItems")
-        document.querySelector('header').classList.add('newHeader')
-        document.querySelector('nav').classList.add("newNav")
-        document.querySelectorAll('.menu-items').forEach(
-            (el)=>{
-                return el.classList.add('newnav')
-            })
+        checkClassArray()
         displayElement("none")
         iconState = false
     }
     else{
-        iconState = true
         menuIcon.innerHTML = "&#8801;"
-        document.querySelector('header').classList.remove('newHeader')
-        document.querySelector('nav').classList.remove("newNav")
-        menuIcon.classList.remove("crossmark")
-        document.querySelectorAll('.menu-items').forEach(
-            (el)=>{
-                return el.classList.remove('newnav')
-            })
-        menuItems.classList.remove("newmenuItems")
+        checkClassArray()
         displayElement("block")
+        iconState = true
     }
 
 })

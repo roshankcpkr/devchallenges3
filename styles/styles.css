@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
     padding: 0;
@@ -13,9 +16,6 @@ body{
     font-size: 2.3rem;
     font-weight: bold;
     display: none;
-}
-*{
-    box-sizing: border-box;
 }
 header,footer,main{
     max-width: 1300px;
@@ -61,8 +61,6 @@ nav{
     display: flex;
     width: 40%;
     justify-content: space-between;
-    font-family: 'Montserrat';
-    font-style: normal;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1.1rem;
@@ -70,7 +68,6 @@ nav{
 }
 footer{
     font-family: 'Montserrat';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
