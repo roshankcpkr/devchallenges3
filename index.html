@@ -26,11 +26,20 @@
   </head>
   <body>
     <header>
-      <nav>
+      <nav class="desktop_nav">
         <div class="logo">
-          This interior
+          <a href="">This interior</a>
         </div>
         <p class="hamburger">&#8801;</p>
+        <div class="desktop-items">
+          <a href="https://devchallenges.io/" id ="active" class="menu-items">Home</a>
+          <a href="https://devchallenges.io/about" class="menu-items">Collection</a>
+          <a href="https://devchallenges.io/about" class="menu-items">About</a>
+          <a href="https://devchallenges.io/contact" class="menu-items">Contact</a>
+        </div>
+      </nav>
+      <nav class="mobile_nav">
+        <p class="crossmark">&#10006;</p>
         <div class="nav-items">
           <a href="https://devchallenges.io/" id ="active" class="menu-items">Home</a>
           <a href="https://devchallenges.io/about" class="menu-items">Collection</a>
@@ -51,25 +60,24 @@
         <div class="image-part">
           <div class="home-image">
             <img src="./photo1.png" alt="decor design" class="big-img"/>
-            <div class="profile">
-              <div class="bio">
-                <div class="bio-img">
-                  <img src="./photo2.png" class="profile-img" alt="profile image" />
-                </div>
-                <div class="bio-text">
-                  <p class="bio-name">Aliza Webber</p>
-                  <p class="bio-title">Interior designer</p>
-                </div>
+          </div>
+          <div class="profile">
+            <div class="bio">
+              <div class="bio-img">
+                <img src="./photo2.png" class="profile-img" alt="profile image" />
               </div>
-              <p class="profile-text">Designed in 2020 by Aliza Webber</p>
+              <div class="bio-text">
+                <p class="bio-name">Aliza Webber</p>
+                <p class="bio-title">Interior designer</p>
+              </div>
             </div>
+            <p class="profile-text">Designed in 2020 by Aliza Webber</p>
           </div>
         </div>
     </main>
     <footer>
-      <div>
-        Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
-    </div>
+        <p>Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.</p>
+        
   </footer>
   <script src="./index.js" type="module"></script>
   </body>
